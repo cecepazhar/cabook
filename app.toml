@@ -1,0 +1,71 @@
+[app]
+identifier = "com.fathforce.cabook"
+name = "CABook"
+accent = "amber"
+code = "CABOOK"
+default_locale = "id"
+locales = ["id", "en"]
+platforms = ["desktop", "android"]
+caframework_version = "0.1.1"
+description = "Unified Multimodal Learning Playlist, Digital Library & Ambient Focus Studio"
+
+[modules]
+profiles = true
+ai = true
+pro = true
+feedback = true
+updater = true
+crash = true
+backup = true
+
+[endpoints]
+gcc_base_url = "https://gcc.cecepazhar.com"
+gcc_api_prefix = "/api/cabook/v1"
+
+[limits]
+cache_default_gb = 5
+custom_sounds_max = 20
+custom_sound_max_mb = 50
+pro_offline_grace_days = 30
+
+[[menus]]
+key = "library"
+label_en = "Library Hub"
+label_id = "Perpustakaan & Katalog"
+icon = "book-open"
+group = "main"
+
+[[menus]]
+key = "playlists"
+label_en = "Learning Playlists"
+label_id = "Playlist Belajar"
+icon = "list-video"
+group = "main"
+
+[[menus]]
+key = "player"
+label_en = "Media & Reader"
+label_id = "Studio Media & Baca"
+icon = "play-circle"
+group = "main"
+
+[[menus]]
+key = "ambient"
+label_en = "Ambient Focus"
+label_id = "Studio Fokus Suara"
+icon = "headphones"
+group = "main"
+
+[[menus]]
+key = "notes"
+label_en = "Time-Synced Notes"
+label_id = "Catatan Belajar"
+icon = "file-text"
+group = "main"
+
+[[menus]]
+key = "settings"
+label_en = "Settings"
+label_id = "Pengaturan"
+icon = "settings"
+group = "system"

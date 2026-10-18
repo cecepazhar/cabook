@@ -1,0 +1,1 @@
+function e(e){if(typeof e==`string`)return e;if(e instanceof Error)return e.message;if(e&&typeof e==`object`){var t,n;let r=e,i=(t=(n=r.message)==null?r.error:n)==null?r.reason:t;if(typeof i==`string`&&i.length>0){let e=typeof r.code==`string`?r.code:void 0;return e?`${i} (${e})`:i}try{return JSON.stringify(e)}catch(e){}}return String(e)}export{e as t};

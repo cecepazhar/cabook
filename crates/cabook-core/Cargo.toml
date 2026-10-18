@@ -1,0 +1,22 @@
+[package]
+name = "cabook-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "CABook core library — ambient focus mixer engine, multi-modal playlist manager, time-synced notes store, and .cabook package serialization."
+
+[lib]
+name = "cabook_core"
+path = "src/lib.rs"
+
+[dependencies]
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+directories.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+rusqlite.workspace = true
+tokio.workspace = true
+parking_lot.workspace = true

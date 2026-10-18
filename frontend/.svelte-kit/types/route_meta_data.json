@@ -1,0 +1,48 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/analytics": [
+		"src/routes/+layout.ts"
+	],
+	"/blog": [
+		"src/routes/+layout.ts"
+	],
+	"/cards": [
+		"src/routes/+layout.ts"
+	],
+	"/changelog": [
+		"src/routes/+layout.ts"
+	],
+	"/dashboard": [
+		"src/routes/+layout.ts"
+	],
+	"/docs": [
+		"src/routes/+layout.ts"
+	],
+	"/form": [
+		"src/routes/+layout.ts"
+	],
+	"/landing": [
+		"src/routes/+layout.ts"
+	],
+	"/settings": [
+		"src/routes/+layout.ts"
+	],
+	"/settings/ai-habits": [
+		"src/routes/+layout.ts"
+	],
+	"/settings/ai-personas": [
+		"src/routes/+layout.ts"
+	],
+	"/settings/ai-routing": [
+		"src/routes/+layout.ts"
+	],
+	"/settings/ai-skills": [
+		"src/routes/+layout.ts"
+	],
+	"/table": [
+		"src/routes/+layout.ts"
+	]
+}
