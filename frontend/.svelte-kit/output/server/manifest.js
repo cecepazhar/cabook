@@ -10,7 +10,7 @@ return {
 	assets: new Set(["favicon.png","hostinger-logo.jpg","logo.png"]),
 	mimeTypes: {".png":"image/png",".jpg":"image/jpeg"},
 	_: {
-		client: {start:"_app/immutable/entry/start.CxmTZ3rO.js",app:"_app/immutable/entry/app.5lbHhRY2.js",imports:["_app/immutable/entry/start.CxmTZ3rO.js","_app/immutable/chunks/BjXG8sW1.js","_app/immutable/chunks/Cqoltuef.js","_app/immutable/entry/app.5lbHhRY2.js","_app/immutable/chunks/Cqoltuef.js","_app/immutable/chunks/CXnWGUKM.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.m-Uz6fs8.js",app:"_app/immutable/entry/app.CxT0pGe1.js",imports:["_app/immutable/entry/start.m-Uz6fs8.js","_app/immutable/chunks/WgdEFG12.js","_app/immutable/chunks/Cqoltuef.js","_app/immutable/entry/app.CxT0pGe1.js","_app/immutable/chunks/Cqoltuef.js","_app/immutable/chunks/CXnWGUKM.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

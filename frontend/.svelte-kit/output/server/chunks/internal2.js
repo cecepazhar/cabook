@@ -1062,7 +1062,7 @@ var options = {
 		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"en\" class=\"dark\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"icon\" href=\"" + assets + "/favicon.png\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\" />\n    <title>CAFramework</title>\n    <script>\n      try {\n        const theme = localStorage.getItem('caframework-theme');\n        if (theme === 'light') {\n          document.documentElement.classList.remove('dark');\n        } else {\n          document.documentElement.classList.add('dark');\n        }\n      } catch (e) {}\n    <\/script>\n    " + head + "\n  </head>\n  <body data-sveltekit-preload-data=\"hover\">\n    <div style=\"display: contents\">" + body + "</div>\n  </body>\n</html>\n",
 		error: error_template_default
 	},
-	version_hash: "11iqy57"
+	version_hash: "5c1m8o"
 };
 async function get_hooks() {
 	let handle;

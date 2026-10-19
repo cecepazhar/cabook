@@ -24,7 +24,7 @@ function set_assets(path) {
 }
 //#endregion
 //#region ../../caframework/frontend/node_modules/@sveltejs/kit/src/runtime/app/env/internal.js
-var version = "1792287179076";
+var version = "1792414387904";
 var prerendering = false;
 function set_building() {}
 function set_prerendering() {
