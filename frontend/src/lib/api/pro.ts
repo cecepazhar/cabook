@@ -1,6 +1,6 @@
 import { invoke } from '@tauri-apps/api/core';
 
-// Mirrors caterm_core::pro (serialized camelCase). Server contract: GCC internal/catermpro/API.md.
+// Mirrors cabook_core::pro (serialized camelCase). Server contract: GCC internal/cabookpro/API.md.
 
 export interface ProAccount {
   id: string;

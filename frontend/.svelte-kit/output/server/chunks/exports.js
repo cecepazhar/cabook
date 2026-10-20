@@ -1,4 +1,4 @@
-import "./index-server.js";
+import "./server.js";
 //#region ../../caframework/frontend/node_modules/@sveltejs/kit/src/utils/array.js
 /**
 * Removes nullish values from an array.

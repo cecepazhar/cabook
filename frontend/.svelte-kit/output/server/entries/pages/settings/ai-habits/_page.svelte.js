@@ -1,4 +1,5 @@
-import { l as derived } from "../../../../chunks/index-server.js";
+import "../../../../chunks/index-server.js";
+import { i as derived } from "../../../../chunks/server.js";
 import "../../../../chunks/uiNotifications.svelte.js";
 import { t as PageHeader } from "../../../../chunks/PageHeader.js";
 import { o as AiNavTabs } from "../../../../chunks/aiRouting.js";

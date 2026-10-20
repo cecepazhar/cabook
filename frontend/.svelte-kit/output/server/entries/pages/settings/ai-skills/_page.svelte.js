@@ -1,4 +1,5 @@
-import { S as escape_html } from "../../../../chunks/index-server.js";
+import "../../../../chunks/index-server.js";
+import { x as escape_html } from "../../../../chunks/server.js";
 import "../../../../chunks/uiNotifications.svelte.js";
 import "../../../../chunks/errors.js";
 import { t as PageHeader } from "../../../../chunks/PageHeader.js";

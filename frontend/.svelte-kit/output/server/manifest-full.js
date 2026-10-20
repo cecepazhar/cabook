@@ -10,7 +10,7 @@ return {
 	assets: new Set(["favicon.png","hostinger-logo.jpg","logo.png"]),
 	mimeTypes: {".png":"image/png",".jpg":"image/jpeg"},
 	_: {
-		client: {start:"_app/immutable/entry/start.m-Uz6fs8.js",app:"_app/immutable/entry/app.CxT0pGe1.js",imports:["_app/immutable/entry/start.m-Uz6fs8.js","_app/immutable/chunks/WgdEFG12.js","_app/immutable/chunks/Cqoltuef.js","_app/immutable/entry/app.CxT0pGe1.js","_app/immutable/chunks/Cqoltuef.js","_app/immutable/chunks/CXnWGUKM.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.BZYnq7Zq.js",app:"_app/immutable/entry/app.BFCli8D_.js",imports:["_app/immutable/entry/start.BZYnq7Zq.js","_app/immutable/chunks/CkTM8o9Y.js","_app/immutable/chunks/Db3mCeui.js","_app/immutable/entry/app.BFCli8D_.js","_app/immutable/chunks/Db3mCeui.js","_app/immutable/chunks/CXnWGUKM.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -23,12 +23,7 @@ return {
 			__memo(() => import('./nodes/8.js')),
 			__memo(() => import('./nodes/9.js')),
 			__memo(() => import('./nodes/10.js')),
-			__memo(() => import('./nodes/11.js')),
-			__memo(() => import('./nodes/12.js')),
-			__memo(() => import('./nodes/13.js')),
-			__memo(() => import('./nodes/14.js')),
-			__memo(() => import('./nodes/15.js')),
-			__memo(() => import('./nodes/16.js'))
+			__memo(() => import('./nodes/11.js'))
 		],
 		remotes: {
 			
@@ -42,101 +37,66 @@ return {
 				endpoint: null
 			},
 			{
-				id: "/analytics",
-				pattern: /^\/analytics\/?$/,
+				id: "/ambient",
+				pattern: /^\/ambient\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 3 },
 				endpoint: null
 			},
 			{
-				id: "/blog",
-				pattern: /^\/blog\/?$/,
+				id: "/notes",
+				pattern: /^\/notes\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 4 },
 				endpoint: null
 			},
 			{
-				id: "/cards",
-				pattern: /^\/cards\/?$/,
+				id: "/player",
+				pattern: /^\/player\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 5 },
 				endpoint: null
 			},
 			{
-				id: "/changelog",
-				pattern: /^\/changelog\/?$/,
+				id: "/playlists",
+				pattern: /^\/playlists\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 6 },
-				endpoint: null
-			},
-			{
-				id: "/dashboard",
-				pattern: /^\/dashboard\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 7 },
-				endpoint: null
-			},
-			{
-				id: "/docs",
-				pattern: /^\/docs\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
-				endpoint: null
-			},
-			{
-				id: "/form",
-				pattern: /^\/form\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
-				endpoint: null
-			},
-			{
-				id: "/landing",
-				pattern: /^\/landing\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
 				id: "/settings",
 				pattern: /^\/settings\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				page: { layouts: [0,], errors: [1,], leaf: 7 },
 				endpoint: null
 			},
 			{
 				id: "/settings/ai-habits",
 				pattern: /^\/settings\/ai-habits\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 12 },
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
 				endpoint: null
 			},
 			{
 				id: "/settings/ai-personas",
 				pattern: /^\/settings\/ai-personas\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 13 },
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
 				endpoint: null
 			},
 			{
 				id: "/settings/ai-routing",
 				pattern: /^\/settings\/ai-routing\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 14 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
 				id: "/settings/ai-skills",
 				pattern: /^\/settings\/ai-skills\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 15 },
-				endpoint: null
-			},
-			{
-				id: "/table",
-				pattern: /^\/table\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 16 },
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			}
 		],

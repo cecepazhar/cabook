@@ -1,4 +1,4 @@
-import { a as attr_class, b as attr } from "./index-server.js";
+import { t as attr_class, y as attr } from "./server.js";
 import { invoke } from "@tauri-apps/api/core";
 //#region src/lib/components/AiNavTabs.svelte
 function AiNavTabs($$renderer, $$props) {

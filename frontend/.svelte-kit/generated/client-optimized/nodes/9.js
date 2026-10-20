@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/form/+page.svelte";
+export { default as component } from "../../../../src/routes/settings/ai-personas/+page.svelte";

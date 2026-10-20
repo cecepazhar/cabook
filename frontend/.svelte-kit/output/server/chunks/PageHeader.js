@@ -1,4 +1,4 @@
-import { S as escape_html, _ as stringify, a as attr_class, b as attr, d as ensure_array_like, l as derived } from "./index-server.js";
+import { a as ensure_array_like, i as derived, s as stringify, t as attr_class, x as escape_html, y as attr } from "./server.js";
 //#region src/lib/components/PageHeader.svelte
 var ACCENTS = {
 	violet: "bg-violet-500/10 dark:bg-violet-500/20 border-violet-500/30 text-violet-600 dark:text-violet-400",

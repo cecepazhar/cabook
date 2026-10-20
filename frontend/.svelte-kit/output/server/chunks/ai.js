@@ -1,10 +1,27 @@
-import { Et as _defineProperty, S as escape_html, _ as stringify, a as attr_class, b as attr, c as bind_props, l as derived, o as attr_style, x as clsx } from "./index-server.js";
-import { a as cmdLockVault, r as cmdIsVaultInitialized } from "./commands.js";
+import "./index-server.js";
+import { Et as _defineProperty, b as clsx, i as derived, n as attr_style, r as bind_props, s as stringify, t as attr_class, x as escape_html, y as attr } from "./server.js";
 import { c as t } from "./uiNotifications.svelte.js";
 import { t as errorText } from "./errors.js";
 import { invoke } from "@tauri-apps/api/core";
 import { check } from "@tauri-apps/plugin-updater";
 import "@tauri-apps/plugin-process";
+//#region src/lib/generated/commands.ts
+async function cmdIsVaultInitialized() {
+	return await invoke("is_vault_initialized");
+}
+async function cmdLockVault() {
+	return await invoke("lock_vault");
+}
+async function cmdGetPendingCrashReport() {
+	return await invoke("get_pending_crash_report");
+}
+async function cmdGetPerformancePrefs() {
+	return await invoke("get_performance_prefs");
+}
+async function cmdSetPerformancePrefs(args) {
+	return await invoke("set_performance_prefs", args);
+}
+//#endregion
 //#region src/lib/api/vault.ts
 function isVaultInitialized() {
 	return cmdIsVaultInitialized();
@@ -531,12 +548,11 @@ function AvatarPicker($$renderer, $$props) {
 //#endregion
 //#region src/lib/appInfo.ts
 var APP_VERSION = "0.1.1";
-var APP_NAME = "CAFramework";
-var REPO_URL = "https://github.com/cecepazhar/caterm";
-var WEBSITE_URL = "https://caterm.fathforce.com";
+var APP_NAME = "CABook";
+var REPO_URL = "https://github.com/cecepazhar/cabook";
+var WEBSITE_URL = "https://cabook.fathforce.com";
 var AUTHOR_URL = "https://cecepazhar.com";
 `${WEBSITE_URL}`;
-/** Primary donation / sponsor-tier channel (Silver $5, Gold $25, Platinum $100 per month). */
 var KOFI_URL = "https://ko-fi.com/cecepazhar";
 function releaseNotesUrl(ver) {
 	return `${REPO_URL}/releases/tag/v${ver.replace(/^v/, "")}`;
@@ -642,4 +658,4 @@ async function getAiSettings() {
 	return invoke("get_ai_settings");
 }
 //#endregion
-export { getAppearance as C, proTeam as S, lockVault as T, getProfile as _, APP_NAME as a, syncPro as b, KOFI_URL as c, releaseNotesUrl as d, AvatarPicker as f, DEFAULT_AVATAR as g, getAmbientStore as h, ProLoginForm as i, REPO_URL as l, ProfileAvatar as m, checkForUpdates as n, APP_VERSION as o, AVATARS as p, getUpdater as r, AUTHOR_URL as s, getAiSettings as t, WEBSITE_URL as u, getPro as v, isVaultInitialized as w, proErrorCode as x, refreshProStatus as y };
+export { getAppearance as C, cmdGetPerformancePrefs as D, cmdGetPendingCrashReport as E, cmdSetPerformancePrefs as O, proTeam as S, lockVault as T, getProfile as _, APP_NAME as a, syncPro as b, KOFI_URL as c, releaseNotesUrl as d, AvatarPicker as f, DEFAULT_AVATAR as g, getAmbientStore as h, ProLoginForm as i, REPO_URL as l, ProfileAvatar as m, checkForUpdates as n, APP_VERSION as o, AVATARS as p, getUpdater as r, AUTHOR_URL as s, getAiSettings as t, WEBSITE_URL as u, getPro as v, isVaultInitialized as w, proErrorCode as x, refreshProStatus as y };

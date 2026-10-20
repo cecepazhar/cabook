@@ -3,28 +3,16 @@
 		"src/routes/+layout.ts",
 		"src/routes/+layout.ts"
 	],
-	"/analytics": [
+	"/ambient": [
 		"src/routes/+layout.ts"
 	],
-	"/blog": [
+	"/notes": [
 		"src/routes/+layout.ts"
 	],
-	"/cards": [
+	"/player": [
 		"src/routes/+layout.ts"
 	],
-	"/changelog": [
-		"src/routes/+layout.ts"
-	],
-	"/dashboard": [
-		"src/routes/+layout.ts"
-	],
-	"/docs": [
-		"src/routes/+layout.ts"
-	],
-	"/form": [
-		"src/routes/+layout.ts"
-	],
-	"/landing": [
+	"/playlists": [
 		"src/routes/+layout.ts"
 	],
 	"/settings": [
@@ -40,9 +28,6 @@
 		"src/routes/+layout.ts"
 	],
 	"/settings/ai-skills": [
-		"src/routes/+layout.ts"
-	],
-	"/table": [
 		"src/routes/+layout.ts"
 	]
 }

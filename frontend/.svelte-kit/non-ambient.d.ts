@@ -29,28 +29,23 @@ declare module "$app/types" {
 	type MatcherParam<M> = M extends (param : string) => param is (infer U extends string) ? U : string;
 
 	export interface AppTypes {
-		RouteId(): "/" | "/analytics" | "/blog" | "/cards" | "/changelog" | "/dashboard" | "/docs" | "/form" | "/landing" | "/settings" | "/settings/ai-habits" | "/settings/ai-personas" | "/settings/ai-routing" | "/settings/ai-skills" | "/table";
+		RouteId(): "/" | "/ambient" | "/notes" | "/player" | "/playlists" | "/settings" | "/settings/ai-habits" | "/settings/ai-personas" | "/settings/ai-routing" | "/settings/ai-skills";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
 			"/": Record<string, never>;
-			"/analytics": Record<string, never>;
-			"/blog": Record<string, never>;
-			"/cards": Record<string, never>;
-			"/changelog": Record<string, never>;
-			"/dashboard": Record<string, never>;
-			"/docs": Record<string, never>;
-			"/form": Record<string, never>;
-			"/landing": Record<string, never>;
+			"/ambient": Record<string, never>;
+			"/notes": Record<string, never>;
+			"/player": Record<string, never>;
+			"/playlists": Record<string, never>;
 			"/settings": Record<string, never>;
 			"/settings/ai-habits": Record<string, never>;
 			"/settings/ai-personas": Record<string, never>;
 			"/settings/ai-routing": Record<string, never>;
-			"/settings/ai-skills": Record<string, never>;
-			"/table": Record<string, never>
+			"/settings/ai-skills": Record<string, never>
 		};
-		Pathname(): "/" | "/analytics" | "/blog" | "/cards" | "/changelog" | "/dashboard" | "/docs" | "/form" | "/landing" | "/settings" | "/settings/ai-habits" | "/settings/ai-personas" | "/settings/ai-routing" | "/settings/ai-skills" | "/table";
+		Pathname(): "/" | "/ambient" | "/notes" | "/player" | "/playlists" | "/settings" | "/settings/ai-habits" | "/settings/ai-personas" | "/settings/ai-routing" | "/settings/ai-skills";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/favicon.png" | "/hostinger-logo.jpg" | "/logo.png" | string & {};
 	}

@@ -1,9 +1,10 @@
-import { At as noop, Et as _defineProperty, t as index_server_exports, v as getContext } from "./index-server.js";
-import { y as noop$1 } from "./asyncIterator.js";
+import { t as index_server_exports } from "./index-server.js";
+import { y as noop } from "./asyncIterator.js";
 import "./internal.js";
 import "./wrapAsyncGenerator.js";
 import "./internal2.js";
 import "./exports.js";
+import { At as noop$1, Et as _defineProperty, h as getContext } from "./server.js";
 import "./awaitAsyncGenerator.js";
 import "@sveltejs/kit/internal";
 import "@sveltejs/kit/internal/server";
@@ -17,9 +18,9 @@ var PRELOAD_PRIORITIES = {
 	false: -1
 };
 ({ ...PRELOAD_PRIORITIES }), PRELOAD_PRIORITIES.hover;
-var updated_listener = { v: noop$1 };
+var updated_listener = { v: noop };
 var updated;
-var is_legacy = noop.toString().includes("$$") || /function \w+\(\) \{\}/.test(noop.toString());
+var is_legacy = noop$1.toString().includes("$$") || /function \w+\(\) \{\}/.test(noop$1.toString());
 var placeholder_url = "a:";
 if (is_legacy) {
 	new URL(placeholder_url);

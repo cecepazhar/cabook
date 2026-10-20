@@ -18,7 +18,7 @@
     "src": "../../caframework/frontend/node_modules/@sveltejs/kit/src/runtime/components/svelte-5/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-server.js",
+      "_server.js",
       "_state.js"
     ]
   },
@@ -28,13 +28,13 @@
     "src": "../../caframework/frontend/node_modules/@sveltejs/kit/src/runtime/server/index.js",
     "isEntry": true,
     "imports": [
-      "_index-server.js",
       "_asyncIterator.js",
       "_internal.js",
       "_utils.js",
       "_wrapAsyncGenerator.js",
       "_internal2.js",
       "_exports.js",
+      "_server.js",
       "_env.js"
     ]
   },
@@ -52,7 +52,7 @@
     "file": "chunks/PageHeader.js",
     "name": "PageHeader",
     "imports": [
-      "_index-server.js"
+      "_server.js"
     ]
   },
   "_ai.fXSWue7C.css": {
@@ -64,7 +64,7 @@
     "name": "ai",
     "imports": [
       "_index-server.js",
-      "_commands.js",
+      "_server.js",
       "_uiNotifications.svelte.js",
       "_errors.js"
     ],
@@ -76,7 +76,7 @@
     "file": "chunks/aiRouting.js",
     "name": "aiRouting",
     "imports": [
-      "_index-server.js"
+      "_server.js"
     ]
   },
   "_asyncIterator.js": {
@@ -88,24 +88,6 @@
     "name": "awaitAsyncGenerator",
     "imports": [
       "_wrapAsyncGenerator.js"
-    ]
-  },
-  "_commands.js": {
-    "file": "chunks/commands.js",
-    "name": "commands"
-  },
-  "_dist.DdFqLGHe.css": {
-    "file": "_app/immutable/assets/dist.DdFqLGHe.css",
-    "src": "_dist.DdFqLGHe.css"
-  },
-  "_dist.js": {
-    "file": "chunks/dist.js",
-    "name": "dist",
-    "imports": [
-      "_index-server.js"
-    ],
-    "css": [
-      "_app/immutable/assets/dist.DdFqLGHe.css"
     ]
   },
   "_env.js": {
@@ -120,14 +102,14 @@
     "file": "chunks/exports.js",
     "name": "exports",
     "imports": [
-      "_index-server.js"
+      "_server.js"
     ]
   },
   "_index-server.js": {
     "file": "chunks/index-server.js",
     "name": "index-server",
     "imports": [
-      "_wrapAsyncGenerator.js"
+      "_server.js"
     ]
   },
   "_internal.js": {
@@ -140,6 +122,14 @@
     "imports": [
       "_index-server.js",
       "_internal.js",
+      "_wrapAsyncGenerator.js",
+      "_server.js"
+    ]
+  },
+  "_server.js": {
+    "file": "chunks/server.js",
+    "name": "server",
+    "imports": [
       "_wrapAsyncGenerator.js"
     ]
   },
@@ -153,6 +143,7 @@
       "_wrapAsyncGenerator.js",
       "_internal2.js",
       "_exports.js",
+      "_server.js",
       "_awaitAsyncGenerator.js"
     ]
   },
@@ -160,7 +151,7 @@
     "file": "chunks/uiNotifications.svelte.js",
     "name": "uiNotifications.svelte",
     "imports": [
-      "_index-server.js"
+      "_server.js"
     ]
   },
   "_utils.js": {
@@ -182,13 +173,13 @@
     "isEntry": true,
     "imports": [
       "_index-server.js",
-      "_commands.js",
+      "_server.js",
       "_ai.js",
       "_uiNotifications.svelte.js",
       "_state.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.nXYW2hsN.css"
+      "_app/immutable/assets/_layout.ku5wVGKo.css"
     ]
   },
   "src/routes/+layout.ts": {
@@ -203,89 +194,50 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-server.js",
-      "_commands.js",
+      "_server.js",
       "_uiNotifications.svelte.js"
     ]
   },
-  "src/routes/analytics/+page.svelte": {
-    "file": "entries/pages/analytics/_page.svelte.js",
-    "name": "entries/pages/analytics/_page.svelte",
-    "src": "src/routes/analytics/+page.svelte",
+  "src/routes/ambient/+page.svelte": {
+    "file": "entries/pages/ambient/_page.svelte.js",
+    "name": "entries/pages/ambient/_page.svelte",
+    "src": "src/routes/ambient/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-server.js",
-      "_dist.js"
+      "_server.js",
+      "_uiNotifications.svelte.js"
     ]
   },
-  "src/routes/blog/+page.svelte": {
-    "file": "entries/pages/blog/_page.svelte.js",
-    "name": "entries/pages/blog/_page.svelte",
-    "src": "src/routes/blog/+page.svelte",
+  "src/routes/notes/+page.svelte": {
+    "file": "entries/pages/notes/_page.svelte.js",
+    "name": "entries/pages/notes/_page.svelte",
+    "src": "src/routes/notes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-server.js",
-      "_dist.js"
+      "_server.js",
+      "_uiNotifications.svelte.js"
     ]
   },
-  "src/routes/cards/+page.svelte": {
-    "file": "entries/pages/cards/_page.svelte.js",
-    "name": "entries/pages/cards/_page.svelte",
-    "src": "src/routes/cards/+page.svelte",
+  "src/routes/player/+page.svelte": {
+    "file": "entries/pages/player/_page.svelte.js",
+    "name": "entries/pages/player/_page.svelte",
+    "src": "src/routes/player/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-server.js",
-      "_dist.js"
+      "_server.js",
+      "_uiNotifications.svelte.js"
     ]
   },
-  "src/routes/changelog/+page.svelte": {
-    "file": "entries/pages/changelog/_page.svelte.js",
-    "name": "entries/pages/changelog/_page.svelte",
-    "src": "src/routes/changelog/+page.svelte",
+  "src/routes/playlists/+page.svelte": {
+    "file": "entries/pages/playlists/_page.svelte.js",
+    "name": "entries/pages/playlists/_page.svelte",
+    "src": "src/routes/playlists/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-server.js",
-      "_dist.js"
-    ]
-  },
-  "src/routes/dashboard/+page.svelte": {
-    "file": "entries/pages/dashboard/_page.svelte.js",
-    "name": "entries/pages/dashboard/_page.svelte",
-    "src": "src/routes/dashboard/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-server.js",
-      "_dist.js"
-    ]
-  },
-  "src/routes/docs/+page.svelte": {
-    "file": "entries/pages/docs/_page.svelte.js",
-    "name": "entries/pages/docs/_page.svelte",
-    "src": "src/routes/docs/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-server.js",
-      "_dist.js"
-    ]
-  },
-  "src/routes/form/+page.svelte": {
-    "file": "entries/pages/form/_page.svelte.js",
-    "name": "entries/pages/form/_page.svelte",
-    "src": "src/routes/form/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-server.js",
-      "_dist.js"
-    ]
-  },
-  "src/routes/landing/+page.svelte": {
-    "file": "entries/pages/landing/_page.svelte.js",
-    "name": "entries/pages/landing/_page.svelte",
-    "src": "src/routes/landing/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-server.js",
-      "_dist.js"
+      "_server.js",
+      "_uiNotifications.svelte.js"
     ]
   },
   "src/routes/settings/+page.svelte": {
@@ -295,7 +247,7 @@
     "isEntry": true,
     "imports": [
       "_index-server.js",
-      "_commands.js",
+      "_server.js",
       "_ai.js",
       "_uiNotifications.svelte.js",
       "_errors.js",
@@ -310,6 +262,7 @@
     "isEntry": true,
     "imports": [
       "_index-server.js",
+      "_server.js",
       "_uiNotifications.svelte.js",
       "_PageHeader.js",
       "_aiRouting.js"
@@ -322,6 +275,7 @@
     "isEntry": true,
     "imports": [
       "_index-server.js",
+      "_server.js",
       "_uiNotifications.svelte.js",
       "_PageHeader.js",
       "_aiRouting.js"
@@ -334,6 +288,7 @@
     "isEntry": true,
     "imports": [
       "_index-server.js",
+      "_server.js",
       "_uiNotifications.svelte.js",
       "_PageHeader.js",
       "_aiRouting.js"
@@ -346,20 +301,11 @@
     "isEntry": true,
     "imports": [
       "_index-server.js",
+      "_server.js",
       "_uiNotifications.svelte.js",
       "_errors.js",
       "_PageHeader.js",
       "_aiRouting.js"
-    ]
-  },
-  "src/routes/table/+page.svelte": {
-    "file": "entries/pages/table/_page.svelte.js",
-    "name": "entries/pages/table/_page.svelte",
-    "src": "src/routes/table/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-server.js",
-      "_dist.js"
     ]
   },
   "virtual:__sveltekit/env": {

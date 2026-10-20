@@ -1,5 +1,5 @@
-import { S as escape_html, _ as stringify, a as attr_class, b as attr, c as bind_props, d as ensure_array_like, kt as fallback, l as derived, n as onDestroy, o as attr_style } from "../../chunks/index-server.js";
-import "../../chunks/commands.js";
+import { n as onDestroy } from "../../chunks/index-server.js";
+import { a as ensure_array_like, i as derived, kt as fallback, n as attr_style, r as bind_props, s as stringify, t as attr_class, x as escape_html, y as attr } from "../../chunks/server.js";
 import { C as getAppearance, T as lockVault, _ as getProfile, a as APP_NAME, d as releaseNotesUrl, h as getAmbientStore, i as ProLoginForm, l as REPO_URL, m as ProfileAvatar, o as APP_VERSION, p as AVATARS, r as getUpdater, s as AUTHOR_URL, u as WEBSITE_URL, v as getPro } from "../../chunks/ai.js";
 import { a as LOCALES, c as t, n as getConfirmDialog, o as getLocale, r as getToasts } from "../../chunks/uiNotifications.svelte.js";
 import { n as goto, t as page } from "../../chunks/state.js";
@@ -112,7 +112,7 @@ function LockScreen($$renderer, $$props) {
 				size: 40,
 				mode: "brand"
 			});
-			$$renderer.push(`<!----> <div><h1 class="text-xl font-bold tracking-wider text-neutral-900 dark:text-white">CATerm <span class="text-xs px-2 py-0.5 rounded bg-sky-500/10 dark:bg-sky-500/20 text-sky-700 dark:text-sky-400 border border-sky-500/30">v${escape_html(APP_VERSION)}</span></h1> <p class="text-xs text-neutral-500 dark:text-neutral-400">${escape_html(t("lock.tagline"))}</p></div></div> <div class="relative z-10 my-auto max-w-2xl xl:max-w-3xl"><div class="mb-4 text-sky-500 dark:text-sky-400"><svg class="w-8 h-8 opacity-60" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg></div> <blockquote class="text-2xl xl:text-3xl font-light text-neutral-700 dark:text-neutral-200 leading-relaxed italic">"${escape_html(t(`lock.quotes.${currentQuote.key}`))}"</blockquote> <p class="mt-4 text-sm font-semibold text-sky-600 dark:text-sky-400">— ${escape_html(currentQuote.author)}</p> <div class="mt-8 p-5 rounded-xl bg-neutral-50/90 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-xs text-neutral-600 dark:text-neutral-400 space-y-2"><div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> ${escape_html(t("lock.zkTitle"))}</div> <p>${escape_html(t("lock.zkBody"))}</p></div></div> <div class="relative z-10 flex items-center justify-between text-xs text-neutral-500"><span>${escape_html(t("lock.zkIdentity"))}</span> <span class="font-mono text-neutral-400 dark:text-neutral-600">v${escape_html(APP_VERSION)}</span></div></div> <div data-tauri-drag-region="" class="w-full lg:w-1/3 flex flex-col justify-center items-center p-6 sm:p-10 xl:p-12 bg-neutral-50 dark:bg-[#0a0a0a] relative z-10 shrink-0"><div class="w-full max-w-sm space-y-8 no-drag"><div class="text-center">`);
+			$$renderer.push(`<!----> <div><h1 class="text-xl font-bold tracking-wider text-neutral-900 dark:text-white">CABook <span class="text-xs px-2 py-0.5 rounded bg-sky-500/10 dark:bg-sky-500/20 text-sky-700 dark:text-sky-400 border border-sky-500/30">v${escape_html(APP_VERSION)}</span></h1> <p class="text-xs text-neutral-500 dark:text-neutral-400">${escape_html(t("lock.tagline"))}</p></div></div> <div class="relative z-10 my-auto max-w-2xl xl:max-w-3xl"><div class="mb-4 text-sky-500 dark:text-sky-400"><svg class="w-8 h-8 opacity-60" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg></div> <blockquote class="text-2xl xl:text-3xl font-light text-neutral-700 dark:text-neutral-200 leading-relaxed italic">"${escape_html(t(`lock.quotes.${currentQuote.key}`))}"</blockquote> <p class="mt-4 text-sm font-semibold text-sky-600 dark:text-sky-400">— ${escape_html(currentQuote.author)}</p> <div class="mt-8 p-5 rounded-xl bg-neutral-50/90 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 text-xs text-neutral-600 dark:text-neutral-400 space-y-2"><div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium"><svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> ${escape_html(t("lock.zkTitle"))}</div> <p>${escape_html(t("lock.zkBody"))}</p></div></div> <div class="relative z-10 flex items-center justify-between text-xs text-neutral-500"><span>${escape_html(t("lock.zkIdentity"))}</span> <span class="font-mono text-neutral-400 dark:text-neutral-600">v${escape_html(APP_VERSION)}</span></div></div> <div data-tauri-drag-region="" class="w-full lg:w-1/3 flex flex-col justify-center items-center p-6 sm:p-10 xl:p-12 bg-neutral-50 dark:bg-[#0a0a0a] relative z-10 shrink-0"><div class="w-full max-w-sm space-y-8 no-drag"><div class="text-center">`);
 			$$renderer.push(`<!--[-1--><div class="flex justify-center mb-4">`);
 			ProfileAvatar($$renderer, {
 				avatar: profile.avatar,
@@ -342,7 +342,7 @@ function AboutModal($$renderer, $$props) {
 			size: 48,
 			mode: "brand"
 		});
-		$$renderer.push(`<!----></div> <h2 id="about-title" class="text-lg font-bold text-neutral-900 dark:text-white">CATerm</h2> <p class="mt-1 text-xs font-mono text-sky-600 dark:text-sky-400">v${escape_html(APP_VERSION)}</p> <p class="mt-3 text-sm text-neutral-500 dark:text-neutral-400">${escape_html(t("about.tagline"))}</p> <dl class="mt-5 text-xs text-left divide-y divide-neutral-100 dark:divide-neutral-800 border-y border-neutral-100 dark:border-neutral-800"><div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.license"))}</dt> <dd class="text-neutral-900 dark:text-neutral-200 font-medium">MIT</dd></div> <div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.website"))}</dt> <dd><a${attr("href", WEBSITE_URL)} target="_blank" rel="noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline font-mono">caterm.fathforce.com</a></dd></div> <div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.source"))}</dt> <dd><a${attr("href", REPO_URL)} target="_blank" rel="noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline font-mono">cecepazhar/caterm</a></dd></div> <div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.builtBy"))}</dt> <dd><a${attr("href", AUTHOR_URL)} target="_blank" rel="noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">Cecep Azhar</a></dd></div></dl> <div class="mt-4 p-3 rounded-xl bg-sky-500/5 dark:bg-sky-500/10 border border-sky-500/20 dark:border-sky-500/30 text-left"><div class="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1"><svg class="w-3 h-3 text-sky-500 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg> <span>${escape_html(t("about.dedication"))}</span></div> <p class="text-xs text-neutral-600 dark:text-neutral-300 italic leading-relaxed">${escape_html(t("about.dedicationText"))}</p></div> <div class="mt-4 text-[11px] text-neutral-500 dark:text-neutral-400 flex flex-col items-center justify-center gap-1"><div>${escape_html(t("about.copyright"))} <a${attr("href", AUTHOR_URL)} target="_blank" rel="noreferrer" class="text-neutral-700 dark:text-neutral-300 hover:text-sky-600 dark:hover:text-sky-400 hover:underline font-medium">Cecep Azhar</a></div> <div class="flex items-center gap-1.5 text-neutral-400 dark:text-neutral-500"><span>${escape_html(t("about.builtWithLove"))}</span> <svg class="w-3 h-3 text-rose-500 fill-rose-500 inline-block shrink-0" viewBox="0 0 24 24"${attr("aria-label", t("about.love"))}><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg> <span>${escape_html(t("about.fromIndonesia"))}</span> <span class="inline-flex items-center justify-center overflow-hidden rounded-sm border border-neutral-300 dark:border-neutral-700 w-4 h-2.5 shrink-0" title="Indonesia"><svg viewBox="0 0 3 2" class="w-full h-full"><rect width="3" height="1" fill="#e70011"></rect><rect y="1" width="3" height="1" fill="#ffffff"></rect></svg></span></div></div></div></div>`);
+		$$renderer.push(`<!----></div> <h2 id="about-title" class="text-lg font-bold text-neutral-900 dark:text-white">CABook</h2> <p class="mt-1 text-xs font-mono text-sky-600 dark:text-sky-400">v${escape_html(APP_VERSION)}</p> <p class="mt-3 text-sm text-neutral-500 dark:text-neutral-400">${escape_html(t("about.tagline"))}</p> <dl class="mt-5 text-xs text-left divide-y divide-neutral-100 dark:divide-neutral-800 border-y border-neutral-100 dark:border-neutral-800"><div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.license"))}</dt> <dd class="text-neutral-900 dark:text-neutral-200 font-medium">MIT</dd></div> <div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.website"))}</dt> <dd><a${attr("href", WEBSITE_URL)} target="_blank" rel="noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline font-mono">cabook.fathforce.com</a></dd></div> <div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.source"))}</dt> <dd><a${attr("href", REPO_URL)} target="_blank" rel="noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline font-mono">cecepazhar/cabook</a></dd></div> <div class="flex justify-between py-2"><dt class="text-neutral-500">${escape_html(t("about.builtBy"))}</dt> <dd><a${attr("href", AUTHOR_URL)} target="_blank" rel="noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline font-medium">Cecep Azhar</a></dd></div></dl> <div class="mt-4 p-3 rounded-xl bg-sky-500/5 dark:bg-sky-500/10 border border-sky-500/20 dark:border-sky-500/30 text-left"><div class="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-1"><svg class="w-3 h-3 text-sky-500 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg> <span>${escape_html(t("about.dedication"))}</span></div> <p class="text-xs text-neutral-600 dark:text-neutral-300 italic leading-relaxed">${escape_html(t("about.dedicationText"))}</p></div> <div class="mt-4 text-[11px] text-neutral-500 dark:text-neutral-400 flex flex-col items-center justify-center gap-1"><div>${escape_html(t("about.copyright"))} <a${attr("href", AUTHOR_URL)} target="_blank" rel="noreferrer" class="text-neutral-700 dark:text-neutral-300 hover:text-sky-600 dark:hover:text-sky-400 hover:underline font-medium">Cecep Azhar</a></div> <div class="flex items-center gap-1.5 text-neutral-400 dark:text-neutral-500"><span>${escape_html(t("about.builtWithLove"))}</span> <svg class="w-3 h-3 text-rose-500 fill-rose-500 inline-block shrink-0" viewBox="0 0 24 24"${attr("aria-label", t("about.love"))}><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg> <span>${escape_html(t("about.fromIndonesia"))}</span> <span class="inline-flex items-center justify-center overflow-hidden rounded-sm border border-neutral-300 dark:border-neutral-700 w-4 h-2.5 shrink-0" title="Indonesia"><svg viewBox="0 0 3 2" class="w-full h-full"><rect width="3" height="1" fill="#e70011"></rect><rect y="1" width="3" height="1" fill="#ffffff"></rect></svg></span></div></div></div></div>`);
 	});
 }
 //#endregion
@@ -457,84 +457,44 @@ function WorkspaceMenu($$renderer, $$props) {
 //#region src/lib/generated/navItems.generated.ts
 var GENERATED_NAV_ITEMS = [
 	{
-		key: "dashboard",
-		label: "Dashboard",
-		href: "/dashboard",
-		icon: "dashboard",
-		description: "Overview metrics, quick actions & executive summary",
-		path: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+		key: "library",
+		label: "Library Hub",
+		href: "/",
+		icon: "book-open",
+		description: "Perpustakaan & Katalog Pembelajaran",
+		path: "M4.26 10.147a60.438 60.438 0 0 1-4.147-2.397 1.5 1.5 0 0 1 0-2.397 1.5 1.5 0 0 1 2.397-.001l1.154-.934a21.654 21.654 0 0 1 7.064-2.621 3.18 3.18 0 0 1 2.411 0 21.654 21.654 0 0 1 7.064 2.621l1.154.934a1.5 1.5 0 0 1 2.397.001 1.5 1.5 0 0 1 0 2.397 60.438 60.438 0 0 1-4.147 2.397 51.312 51.312 0 0 0-6.945 1.471 2.452 2.452 0 0 1-1.184 0 51.309 51.309 0 0 0-6.945-1.471z"
+	},
+	{
+		key: "playlists",
+		label: "Learning Playlists",
+		href: "/playlists",
+		icon: "list-video",
+		description: "Playlist Belajar & Materi",
+		path: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+	},
+	{
+		key: "player",
+		label: "Media & Reader",
+		href: "/player",
+		icon: "play-circle",
+		description: "Studio Media & Buku",
+		path: "M21 12a9 9 0 1 1-9-9m9 9a9 9 0 0 1-9 9m9-9H9m9 0a9 9 0 0 1-9 9"
+	},
+	{
+		key: "ambient",
+		label: "Ambient Focus",
+		href: "/ambient",
+		icon: "headphones",
+		description: "Studio Fokus Suara",
+		path: "M12 18v-3.255a7.005 7.005 0 0 0-7-7 7.005 7.005 0 0 1 7-7 7.005 7.005 0 0 1 7 7 7.005 7.005 0 0 0-7 7V18M3.04 14.858a9.001 9.001 0 0 0 17.92 0"
 	},
 	{
 		key: "notes",
-		label: "Notes",
-		href: "/",
-		icon: "notes",
-		description: "Encrypted personal notes vertical slice",
-		path: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-	},
-	{
-		key: "table",
-		label: "Table",
-		href: "/table",
-		icon: "table",
-		description: "High-performance data grid, sorting & pagination",
-		path: "M3 10h18M3 14h18m-9-4v8m-7 4h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-	},
-	{
-		key: "form",
-		label: "Form",
-		href: "/form",
-		icon: "form",
-		description: "Multi-step data entry, validation & rich input controls",
-		path: "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-	},
-	{
-		key: "cards",
-		label: "Cards",
-		href: "/cards",
-		icon: "cards",
-		description: "Entity catalog, badge statuses & card views",
-		path: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z M14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z M4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z M14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-	},
-	{
-		key: "analytics",
-		label: "Analytics",
-		href: "/analytics",
-		icon: "analytics",
-		description: "Progress bars, telemetry stats & visual indicators",
-		path: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-	},
-	{
-		key: "landing",
-		label: "Landing",
-		href: "/landing",
-		icon: "landing",
-		description: "Public landing page presentation & features",
-		path: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-	},
-	{
-		key: "blog",
-		label: "Blog",
-		href: "/blog",
-		icon: "blog",
-		description: "Technical articles, guides & release announcements",
-		path: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-	},
-	{
-		key: "changelog",
-		label: "Changelog",
-		href: "/changelog",
-		icon: "changelog",
-		description: "Release history, roadmap & update notes",
-		path: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-	},
-	{
-		key: "docs",
-		label: "Docs",
-		href: "/docs",
-		icon: "docs",
-		description: "Framework & developer documentation",
-		path: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+		label: "Time-Synced Notes",
+		href: "/notes",
+		icon: "file-text",
+		description: "Catatan Belajar & Bookmark",
+		path: "M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625A2.25 2.25 0 0 0 3.375 3.375v17.25A2.25 2.25 0 0 0 5.625 22.875h7.125"
 	}
 ];
 //#endregion
@@ -667,7 +627,7 @@ function BottomNav($$renderer, $$props) {
 			if (href === "/") return page.url.pathname === "/";
 			return page.url.pathname.startsWith(href);
 		}
-		$$renderer.push(`<nav${attr("aria-label", t("shell.bottomNav") || "Navigasi Bawah")} class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/90 dark:bg-[#121212]/90 backdrop-blur-md border-t border-neutral-200 dark:border-neutral-800 pb-[env(safe-area-inset-bottom,0px)] transition-colors select-none"><div class="h-14 grid grid-cols-5 items-stretch px-1"><a${attr("href", primaryItem().href)}${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${isActive(primaryItem().href) ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"${attr("d", primaryItem().path)}></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(primaryItem().label)}</span></a> <a href="/settings?tab=security"${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${page.url.pathname === "/settings" && page.url.searchParams.get("tab") === "security" ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(t("settings.security.title") || "Keamanan")}</span></a> <a href="/settings?tab=ai"${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${page.url.pathname === "/settings" && page.url.searchParams.get("tab") === "ai" ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path></svg> <span class="truncate max-w-[56px] leading-none">Hana AI</span></a> <a href="/settings"${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${page.url.pathname === "/settings" && (!page.url.searchParams.get("tab") || page.url.searchParams.get("tab") === "profile") ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(t("nav.settings") || "Pengaturan")}</span></a> <button type="button" class="flex flex-col items-center justify-center gap-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors cursor-pointer"${attr("aria-label", t("shell.allMenus") || "Buka Semua Menu")}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(t("shell.allMenus") || "Semua")}</span></button></div></nav>`);
+		$$renderer.push(`<nav${attr("aria-label", t("shell.bottomNav") || "Navigasi Bawah")} class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/90 dark:bg-[#121212]/90 backdrop-blur-md border-t border-neutral-200 dark:border-neutral-800 pb-[env(safe-area-inset-bottom,0px)] transition-colors select-none"><div class="h-14 grid grid-cols-5 items-stretch px-1"><a${attr("href", primaryItem().href)}${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${isActive(primaryItem().href) ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"${attr("d", primaryItem().path)}></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(primaryItem().label)}</span></a> <a href="/settings?tab=security"${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${page.url.pathname === "/settings" && page.url.searchParams.get("tab") === "security" ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(t("settings.security.title") || "Keamanan")}</span></a> <a href="/settings?tab=ai"${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${page.url.pathname === "/settings" && page.url.searchParams.get("tab") === "ai" ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path></svg> <span class="truncate max-w-[56px] leading-none">AI Study</span></a> <a href="/settings"${attr_class(`flex flex-col items-center justify-center gap-1 text-[10px] font-medium transition-colors ${page.url.pathname === "/settings" && (!page.url.searchParams.get("tab") || page.url.searchParams.get("tab") === "profile") ? "text-sky-600 dark:text-sky-400 font-semibold" : "text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200"}`)}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(t("nav.settings") || "Pengaturan")}</span></a> <button type="button" class="flex flex-col items-center justify-center gap-1 text-[10px] font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors cursor-pointer"${attr("aria-label", t("shell.allMenus") || "Buka Semua Menu")}><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg> <span class="truncate max-w-[56px] leading-none">${escape_html(t("shell.allMenus") || "Semua")}</span></button></div></nav>`);
 	});
 }
 //#endregion
@@ -694,7 +654,7 @@ function AllMenusSheet($$renderer, $$props) {
 			},
 			{
 				id: "ai",
-				label: "Hana AI Copilot",
+				label: "AI Study Copilot",
 				href: "/settings?tab=ai",
 				icon: "M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z",
 				color: "text-purple-500 bg-purple-500/10"
@@ -868,7 +828,7 @@ function _layout($$renderer, $$props) {
 					AiChatPanel($$renderer, { onClose: closeAiChat });
 				} else $$renderer.push("<!--[-1-->");
 				$$renderer.push(`<!--]--></main></div></div> `);
-				if (!aiChat.open) $$renderer.push(`<!--[0--><button type="button" class="fixed bottom-20 right-4 md:bottom-5 md:right-5 z-40 flex items-center gap-2 px-3.5 py-2 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-neutral-100 border border-neutral-700/80 shadow-2xl shadow-black/60 hover:scale-105 active:scale-95 transition-all text-xs font-semibold cursor-pointer group" title="Hana AI (CAFramework Assistant)" aria-label="Open Hana AI"><svg class="w-4 h-4 text-rose-500 group-hover:rotate-12 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path></svg> <span>Hana AI</span> <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span></button>`);
+				if (!aiChat.open) $$renderer.push(`<!--[0--><button type="button" class="fixed bottom-20 right-4 md:bottom-5 md:right-5 z-40 flex items-center gap-2 px-3.5 py-2 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-neutral-100 border border-neutral-700/80 shadow-2xl shadow-black/60 hover:scale-105 active:scale-95 transition-all text-xs font-semibold cursor-pointer group" title="AI Study (CAFramework Assistant)" aria-label="Open AI Study"><svg class="w-4 h-4 text-rose-500 group-hover:rotate-12 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"></path></svg> <span>AI Study</span> <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span></button>`);
 				else $$renderer.push("<!--[-1-->");
 				$$renderer.push(`<!--]--> `);
 				BottomNav($$renderer, { onOpenAll: () => allMenusSheetOpen = true });
